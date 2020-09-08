@@ -1,8 +1,26 @@
+var startButton = document.getElementById("start-btn");
+
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
+startButton.addEventListener("click", startQuiz);
+
+function startQuiz() {
+	console.log("the quiz has started.");
+	startButton.classList.add("hide");
+}
+
 // THEN a timer starts and I am presented with a question
+function setTimer() {}
+
+function setNextQuestion() {}
+
 // WHEN I answer a question
+function selectAnswer() {}
+
+//Function will below will either display if you got a question "Correct!" or "Wrong!"
+function displaySelectionResult() {}
 // THEN I am presented with another question
+function setNextQuestion() {}
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 // WHEN all questions are answered or the timer reaches 0
@@ -40,5 +58,3 @@
 //-----row-3:
 //---------col-sm-12
 //---------------<p>Wrong! or Correct!<p>
-
-//Functions
