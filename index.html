@@ -38,21 +38,71 @@
 		</header>
 		<!-- Main Section: The Start-->
 		<!-- Create three rows to represent three distinct areas -->
-		<main class="container m-auto">
-			<div class="row row-1">
-				<div class="col-sm-12">
-					<p>Test section-1</p>
+		<main class="container mx-auto bg-light border">
+			<!-- need to center  -->
+			<div class="container border px-5">
+				<!-- Section-One-Content-START -->
+				<div class="row border" id="row-1">
+					<div class="col-md-12">
+						<div class="hide" id="question-container">
+							<div class="row">
+								<div class="col-md-12">
+									<div id="question">Question</div>
+								</div>
+							</div>
+							<div class="row"></div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row row-2">
-				<div class="col-sm-12">
-					<p>Test section-2</p>
+				<!-- Section-One-Content-END -->
+
+				<!-- Section-2-Content-START -->
+				<div class="row border" id="row-2">
+					<div class="col-md-12">
+						<div class="results-container hide">
+							<div class="col-md-3">
+								<div id="answer-buttons" class="btn-grid">
+									<div class="row">
+										<button type="button" class="btn btn-primary m-1">Answer1</button>
+									</div>
+									<div class="row">
+										<button type="button" class="btn btn-primary m-1">Answer2</button>
+									</div>
+									<div class="row">
+										<button type="button" class="btn btn-primary m-1">Answer3</button>
+									</div>
+									<div class="row">
+										<button type="button" class="btn btn-primary m-1">Answer4</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-9"></div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row row-3">
-				<div class="col-sm-12">
-					<p>Test section-2</p>
+				<!-- Section-2-Content-END -->
+
+				<!-- Section-3-Content-Start -->
+				<div class="row border" id="row-3">
+					<div class="col-md-12">
+						<div class="controls-container">
+							<button type="button" id="start-btn" class="btn btn-primary start-btn">
+								Start
+							</button>
+							<button type="button" id="next-btn" class="btn btn-primary next-btn hide">
+								Next
+							</button>
+							<button
+								type="button"
+								id="start-btn"
+								class="btn btn-primary result-btn hide"
+							>
+								Result
+							</button>
+						</div>
+					</div>
 				</div>
+				<!-- Section-3-Content-End -->
 			</div>
 		</main>
 

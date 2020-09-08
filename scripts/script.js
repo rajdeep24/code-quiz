@@ -31,13 +31,13 @@
 //--------------row-1-q-1
 //--------------row-1-q-1
 //----------------<ol>
-//-------------------<button class="btn btn-answer-options"></button>
-//-------------------<button class="btn btn-answer-options"></button>
-//-------------------<button class="btn btn-answer-options"></button>
-//-------------------<button class="btn btn-answer-options"></button>
+//-------------------<li><button class="btn btn-answer-options"></button></li>
+//-------------------<li><button class="btn btn-answer-options"></button></li>
+//-------------------<li><button class="btn btn-answer-options"></button></li>
+//-------------------<li><button class="btn btn-answer-options"></button></li>
 //---------------<ol>
 //---------col-sm-6
-//-----row-2:
+//-----row-3:
 //---------col-sm-12
 //---------------<p>Wrong! or Correct!<p>
 
