@@ -1,4 +1,9 @@
-#navbar-brand,
-#nav-link {
+.navbar-brand,
+.nav-link {
+	text-decoration: none;
 	color: purple;
 }
+
+/* .hide {
+	display: none;
+} */
