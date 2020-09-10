@@ -1,5 +1,8 @@
 var startButton = document.querySelector("#start-btn");
-
+var answerButtonGrid = document.querySelector(".btn-grid");
+var submitScore = document.querySelector("#highscore");
+var yourScoreEl = document.querySelector("#yourscore");
+submitScore.classList.add("hide");
 //---------Timer-------------//
 var timerEl = document.querySelector("#timer");
 var timerId;
@@ -60,7 +63,9 @@ startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
 	console.log("the quiz has started.");
+	answerButtonGrid.classList.remove("hide");
 	startButton.classList.add("hide");
+	submitScore.classList.add("hide");
 	// render question 1
 	//startTimer
 	startTimer();
@@ -104,6 +109,12 @@ function answerQuestion(event) {
 function endgame() {
 	clearInterval(timerId);
 	alert("end game");
+	answerButtonGrid.classList.add("hide");
+	questionEl.classList.add("hide");
+	submitScore.classList.remove("hide");
+
+	score.innerHTML = yourScoreEl.append();
+
 	// use a prompt to ask the user for their name
 	// read the high scores from local storage
 	// use JSON.parse to convert to an array

@@ -1,7 +1,9 @@
+.navbar,
 .navbar-brand,
 .nav-link {
 	text-decoration: none;
 	color: purple;
+	font-weight: bold;
 }
 #question {
 	font-size: larger;

@@ -37,17 +37,23 @@
 			<!-- Navigation: The End-->
 		</header>
 		<!-- Main Section: The Start-->
-		<!-- Create three rows to represent three distinct areas -->
 
 		<!-- need to center  -->
 		<div class="container border px-5">
 			<!-- Section-One-Content-START -->
-			<div class="row border" id="row-1">
+			<div class="row" id="row-1">
 				<div class="col-md-12">
 					<div id="question-container">
 						<div class="row">
 							<div class="col-md-12">
-								<div id="question">Question</div>
+								<div id="question">
+									<h1>Coding Quiz Challenge</h1>
+									<br />
+									<p>
+										Try to answer the following code related questions with the time
+										limit.
+									</p>
+								</div>
 							</div>
 						</div>
 						<div class="row"></div>
@@ -61,7 +67,7 @@
 				<div class="col-md-12">
 					<div class="results-container">
 						<div class="col-md-3">
-							<div id="answer-buttons" class="btn-grid">
+							<div id="answer-buttons" class="btn-grid hide">
 								<div class="row" id="row-1">
 									<button
 										type="button"
@@ -120,9 +126,25 @@
 					</div>
 				</div>
 			</div>
-
-			<div id="highscore"></div>
 			<!-- Section-3-Content-End -->
+			<div id="highscore">
+				<h3>All Done!</h3>
+				<br />
+				<p id="your-score">Great job!</p>
+				<div class="input-group input-group-sm mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-sm">Initials</span>
+					</div>
+					<input
+						type="text"
+						class="form-control"
+						aria-label="Sizing example input"
+						aria-describedby="inputGroup-sizing-sm"
+					/>
+					<span>
+					<input class="btn btn-primary" type="submit" value="Submit" /><span>
+				</div>
+			</div>
 		</div>
 
 		<!-- Main Section: The End-->
