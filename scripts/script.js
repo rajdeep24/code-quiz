@@ -37,23 +37,23 @@ questionsAndAnswers = [
 	{
 		question: "Commonly used data types DO NOT include: ",
 		options: ["strings", "booleans", "alerts", "numbers"],
-		answerKey: 2,
+		answerKey: 3,
 	},
 	{
 		question: "The condition in an if/else statement is enclosed within ___. ",
 		options: ["quotes", "curly brackets", "parentheses", "square brackets"],
-		answerKey: 2,
+		answerKey: 3,
 	},
 	{
 		question:
 			"A very useful tool used during development and debugging for printing content to the debugger is: ",
 		options: ["javaScript", "terminal bash", "for loops", "console.log"],
-		answerKey: 3,
+		answerKey: 4,
 	},
 	{
 		question: "Arrays in Javascript can be used to store ____: ",
 		options: ["numbers and strings", "other arrays", "booleans", "all the above"],
-		answerKey: 3,
+		answerKey: 4,
 	},
 ];
 
@@ -112,8 +112,6 @@ function endgame() {
 	answerButtonGrid.classList.add("hide");
 	questionEl.classList.add("hide");
 	submitScore.classList.remove("hide");
-
-	score.innerHTML = yourScoreEl.append();
 
 	// use a prompt to ask the user for their name
 	// read the high scores from local storage
