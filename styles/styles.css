@@ -1,6 +1,5 @@
-.navbar,
-.navbar-brand,
-.nav-link {
+.nav-link,
+.navbar-brand {
 	text-decoration: none;
 	color: purple;
 	font-weight: bold;
