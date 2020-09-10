@@ -33,7 +33,7 @@ Below are screen shots that follow a series of steps on how to use the applicati
 
 ## Credits
 
-I would like to credit my peers, instructors, and teacher assistants from the GT bootcamp. They were an integral part in providing the essential knowledge and guidance needed to accomplish this task. Additionally, I would like to thank my tutor, Kevin Ferguson. He helped me understand the importance of psecoding and how to logically build your process before writing a single line of code. He helped me reinforce key javascript concepts that would allow me to develop a functioning password generator.
+I would like to credit my peers, instructors, and teacher assistants from the GT bootcamp. They were an integral part in providing the essential knowledge and guidance needed to accomplish this task. Additionally, I would like to thank my tutor, Kevin Ferguson.
 
 ## License
 
