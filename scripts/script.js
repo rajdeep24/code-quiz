@@ -32,34 +32,27 @@ var btn4EL = document.querySelector("#btn-4");
 
 questionsAndAnswers = [
 	{
-		question: "1.Commonly used data types DO NOT include: ",
-		options: ["1strings", "booleans", "alerts", "numbers"],
+		question: "Commonly used data types DO NOT include: ",
+		options: ["strings", "booleans", "alerts", "numbers"],
 		answerKey: 2,
 	},
 	{
-		question: "2.Commonly used data types DO NOT include: ",
-		options: ["2strings", "booleans", "alerts", "numbers"],
+		question: "The condition in an if/else statement is enclosed within ___. ",
+		options: ["quotes", "curly brackets", "parentheses", "square brackets"],
 		answerKey: 2,
 	},
 	{
-		question: "3.Commonly used data types DO NOT include: ",
-		options: ["3strings", "booleans", "alerts", "numbers"],
-		answerKey: 2,
+		question:
+			"A very useful tool used during development and debugging for printing content to the debugger is: ",
+		options: ["javaScript", "terminal bash", "for loops", "console.log"],
+		answerKey: 3,
 	},
 	{
-		question: "4.Commonly used data types DO NOT include: ",
-		options: ["4strings", "booleans", "alerts", "numbers"],
-		answerKey: 2,
+		question: "Arrays in Javascript can be used to store ____: ",
+		options: ["numbers and strings", "other arrays", "booleans", "all the above"],
+		answerKey: 3,
 	},
 ];
-
-////////////////////////////////////////
-///////Page-6-Enter & Submit Score//////
-////////////////////////////////////////
-
-////////////////////////////////////////
-///////Page-7-Display HighScore/////////
-////////////////////////////////////////
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
@@ -129,3 +122,11 @@ function endgame() {
 // create a div html element .createElement
 // add the user name and score to the html element  .innerHTML=
 //  document.querySelector("#highscore").append(newly created element)
+
+////////////////////////////////////////
+///////Page-6-Enter & Submit Score//////
+////////////////////////////////////////
+
+////////////////////////////////////////
+///////Page-7-Display HighScore/////////
+////////////////////////////////////////
