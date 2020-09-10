@@ -1,39 +1,30 @@
-//////////////////////////////////////////////////////////
-////////////////////Global Variables & Objects ///////////
-//////////////////////////////////////////////////////////
-
-//List all the possible global variables from each page
-
-/////////////////////////////////
-/////////Page-1-Start-Quiz///////
-/////////////////////////////////
-//---------h1-------//
-var h1CodingQuizChallenge = document.createElement("h1"); //1 Create your h1 heading
-h1CodingQuizChallenge.innerHTML = "Coding Quiz Challenge"; //2 Insert text into your h1
-document.body.children[1].prepend(h1CodingQuizChallenge); //3.) Prepend html h1 heading
-
-//---------P-------//
-var directionsParaEl = document.createElement("p"); //1.) Create <p> tag
-directionsParaEl.innerHTML =
-	"Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!"; //2.) Insert quiz-directions into the p tag
-document.body.children[1].append(directionsParaEl); //3.) Append <p> tag
-
-//---------Start Button-------//
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-var startBtn = document.createElement("button");
-startBtn.innerHTML = "Start Quiz";
-document.body.children[1].append(startBtn);
+var startButton = document.querySelector("#start-btn");
 
 //---------Timer-------------//
-timerEl = document.querySelector("#timer");
-timerEl.innerHTML = console.log(timerEl);
+var timerEl = document.querySelector("#timer");
+var timerId;
+var totalTime = 70; // Total seconds given to take the quiz
+var questionIndex = 0;
+var score = 0;
 
+function startTimer() {
+	timerId = setInterval(function () {
+		totalTime--;
+		//update timer
+
+		// when time reaches 0 the game is over;
+		if (totalTime === 0) {
+			endgame();
+		}
+
+		timerEl.innerHTML = totalTime;
+	}, 1000); // One Second Interval
+}
 /////////////////////////////////
 /////Page-2-5-Questionnaire//////
 /////////////////////////////////
 
-var questionEl = document.querySelector("question");
+var questionEl = document.querySelector("#question");
 var btn1EL = document.querySelector("#btn-1");
 var btn2EL = document.querySelector("#btn-2");
 var btn3EL = document.querySelector("#btn-3");
@@ -41,36 +32,24 @@ var btn4EL = document.querySelector("#btn-4");
 
 questionsAndAnswers = [
 	{
-		question1: "Question 1 here",
-		choice1: "Choice1",
-		choice2: "Choice2",
-		choice3: "Choice3",
-		choice4: "Choice4",
-		answerKey: "Identify the choice number",
+		question: "1.Commonly used data types DO NOT include: ",
+		options: ["1strings", "booleans", "alerts", "numbers"],
+		answerKey: 2,
 	},
 	{
-		question2: "Question 2 here",
-		choice1: "Choice1",
-		choice2: "Choice2",
-		choice3: "Choice3",
-		choice4: "Choice4",
-		answerKey: "Identify the choice number",
+		question: "2.Commonly used data types DO NOT include: ",
+		options: ["2strings", "booleans", "alerts", "numbers"],
+		answerKey: 2,
 	},
 	{
-		question3: "Question 3 here",
-		choice1: "Choice1",
-		choice2: "Choice2",
-		choice3: "Choice3",
-		choice4: "Choice4",
-		answerKey: "Identify the choice number",
+		question: "3.Commonly used data types DO NOT include: ",
+		options: ["3strings", "booleans", "alerts", "numbers"],
+		answerKey: 2,
 	},
 	{
-		question4: "Question 4 here",
-		choice1: "Choice1",
-		choice2: "Choice2",
-		choice3: "Choice3",
-		choice4: "Choice4",
-		answerKey: "Identify the choice number",
+		question: "4.Commonly used data types DO NOT include: ",
+		options: ["4strings", "booleans", "alerts", "numbers"],
+		answerKey: 2,
 	},
 ];
 
@@ -89,23 +68,64 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
 	console.log("the quiz has started.");
 	startButton.classList.add("hide");
+	// render question 1
+	//startTimer
+	startTimer();
+	renderQuestion();
 }
 
-// THEN a timer starts and I am presented with a question
-function setTimer() {}
+function renderQuestion() {
+	questionEl.innerHTML = questionsAndAnswers[questionIndex].question;
+	btn1EL.innerHTML = questionsAndAnswers[questionIndex].options[0];
+	btn2EL.innerHTML = questionsAndAnswers[questionIndex].options[1];
+	btn3EL.innerHTML = questionsAndAnswers[questionIndex].options[2];
+	btn4EL.innerHTML = questionsAndAnswers[questionIndex].options[3];
+}
 
-function setNextQuestion() {}
+var answerSelectors = document.querySelectorAll(".answer");
 
-// WHEN I answer a question
-function selectAnswer() {}
+for (var i = 0; i < answerSelectors.length; i++) {
+	answerSelectors[i].addEventListener("click", answerQuestion);
+}
 
-//Function will below will either display if you got a question "Correct!" or "Wrong!"
-function displaySelectionResult() {}
-// THEN I am presented with another question
-function setNextQuestion() {}
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and score
+function answerQuestion(event) {
+	var answer = parseInt(event.target.getAttribute("answer-key"));
+
+	if (answer === questionsAndAnswers[questionIndex].answerKey) {
+		alert("correct");
+		score++;
+	} else {
+		alert("incorrect");
+	}
+
+	questionIndex++;
+
+	// WHEN all questions are answered the game is over
+	if (questionIndex > questionsAndAnswers.length - 1) {
+		endgame();
+	} else {
+		renderQuestion();
+	}
+}
+
+function endgame() {
+	clearInterval(timerId);
+	alert("end game");
+	// use a prompt to ask the user for their name
+	// read the high scores from local storage
+	// use JSON.parse to convert to an array
+	// add the user and their score
+	// sort the array
+	// use JSON.stringify to convert to a string
+	// update the value in localstorage
+}
+
+// create a function for showing high scores
+// read the high scores from local storage
+// use JSON.parse to convert to an array
+// loop through all elements in the array and add to the page.
+
+// for (var i = 0; i<array.length; i++)
+// create a div html element .createElement
+// add the user name and score to the html element  .innerHTML=
+//  document.querySelector("#highscore").append(newly created element)
