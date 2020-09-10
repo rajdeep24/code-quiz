@@ -3,7 +3,10 @@
 	text-decoration: none;
 	color: purple;
 }
-
-/* .hide {
+#question {
+	font-size: larger;
+	font-weight: bold;
+}
+.hide {
 	display: none;
-} */
+}
